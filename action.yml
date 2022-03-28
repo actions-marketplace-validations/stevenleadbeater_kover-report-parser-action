@@ -1,0 +1,33 @@
+name: "Kover report parser action"
+description: "Parse kotlin kover reports"
+author: "Steven Leadbeater <info@ledsysconsultancy.com>"
+
+outputs:
+  line_covered:
+    description: 'Lines covered from report file'
+  line_missed:
+    description: 'Lines missed from report file'
+  instruction_covered:
+    description: 'Instructions covered from report file'
+  instruction_missed:
+    description: 'Instructions missed from report file'
+  branch_covered:
+    description: 'Branches covered from report file'
+  branch_missed:
+    description: 'Branches missed from report file'
+  method_covered:
+    description: 'Methods covered from report file'
+  method_missed:
+    description: 'Methods missed from report file'
+  class_covered:
+    description: 'Classes covered from report file'
+  class_missed:
+    description: 'Classes missed from report file'
+
+branding:
+  icon: "anchor"
+  color: "blue"
+
+runs:
+  using: docker
+  image: docker://ledsys/kover-report-parser-action:latest
